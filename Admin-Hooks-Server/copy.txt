@@ -1,0 +1,56 @@
+
+
+router.post("/signup",signupCheck, (req, res) => {
+  console.log("signup routes hit");
+  userController.signupFunc(req, res);
+});
+router.post("/login",signupCheck, (req,res) => {
+  console.log("login routes hit");
+  userController.loginFunc(req, res);
+})
+router.post("/create",auth, (req, res) => {
+  console.log("create todo routes hit");
+  userController.createTodo(req, res);
+});
+router.get("/read", auth, (req, res) => {
+  console.log("read todo routes hit");
+  userController.readTodo(req, res);
+});
+router.post("/update", auth, (req, res) => {
+  console.log("update todo routes hit");
+  userController.updateTodo(req, res);
+});
+router.get("/delete", auth, (req, res) => {
+  console.log("delete todo routes hit");
+  userController.deleteTodo(req, res);
+});
+router.get("/deleteall", auth, (req, res) => {
+  console.log("deleteall todo routes hit");
+  userController.deleteAllTodo(req, res);
+});
+
+
+// const express = require('express');
+// const router = express.Router();
+
+/////
+{
+  "dbUser": {
+    "_id": "6576f6764f6a6132c42958aa",
+    "email": "john@email.com",
+    "password": "secret123",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc2ZjY3NjRmNmE2MTMyYzQyOTU4YWEiLCJpYXQiOjE3MDIyOTY1ODUsImV4cCI6MTcwMjkwMTM4NX0.9ROwLKfJWb0cECDukEbRmAjTiC6wkc9l-kI4_TU4D8o"
+}
+/////
+
+{
+  "dbUser": {
+    "_id": "6576f6b44f6a6132c42958ac",
+    "email": "testuser@gmail.com",
+    "password": "testuser",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTc2ZjZiNDRmNmE2MTMyYzQyOTU4YWMiLCJpYXQiOjE3MDIyOTY3MzYsImV4cCI6MTcwMjkwMTUzNn0.-ruEucql6p13g1y4LzHWiY9RiXnNVAB-YZJKYEaWsNg"
+}

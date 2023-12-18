@@ -89,15 +89,16 @@ const getAllDish = async (req, res) => {
 };
 const delAllDish = async (req, res) => {
   try{
-        const delAllTodo = await userDish.deleteMany();
+       const delAllDish = await userDish.deleteMany();
     res
       .status(200)
-      .json({ message: "Dishes deleted X",delAllTodo });
+      .json({ message: `${delAllDish.deletedCount} dishes are deleted`, delAllDish });
   }catch(err){
     console.error(err);
     res.status(500).json({ message: "Error get All Dish", error: err.message });
   }
 };
+  
 module.exports = {
   loginFunc,
   addNewDish,

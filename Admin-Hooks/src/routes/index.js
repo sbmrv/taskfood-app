@@ -71,6 +71,7 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
+import Order from "../pages/Order/index"
 import DashboardSaas from "../pages/Dashboard-saas/index"
 import DashboardCrypto from "../pages/Dashboard-crypto/index"
 import Blog from "../pages/Dashboard-Blog/index"
@@ -171,6 +172,7 @@ import ContactsProfile from "../pages/Contacts/ContactsProfile/contacts-profile"
 
 const authProtectedRoutes = [
   { path: "/products", component: Dashboard },
+  { path: "/order", component: Order },
   { path: "/dashboard-title2", component: DashboardSaas },
   { path: "/dashboard-crypto", component: DashboardCrypto },
   { path: "/blog", component: Blog },

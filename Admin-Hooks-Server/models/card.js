@@ -21,6 +21,8 @@ const dishSchema = new Schema({
   },
   base64Image: {
     type: String,
+    default:
+      "https://static.vecteezy.com/system/resources/previews/005/542/677/non_2x/modern-shape-plate-with-spoon-and-fork-logo-symbol-icon-graphic-design-illustration-idea-creative-vector.jpg",
   },
 });
 
